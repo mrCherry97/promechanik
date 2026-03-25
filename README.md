@@ -2,7 +2,7 @@
 
 > Professional auto repair shop website built with React, TypeScript & Tailwind CSS. Fast, responsive, and modern.
 
-🌐 **Live Demo:** [promechanik-test.lovable.app](https://promechanik-test.lovable.app)
+🌐 **Live Demo:** [mrcherry97.github.io/promechanik/](https://mrcherry97.github.io/promechanik/)
 
 ---
 
@@ -17,29 +17,29 @@
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | React 18 + TypeScript |
-| Bundler | Vite 5 |
-| Styling | Tailwind CSS 3 + shadcn/ui |
-| Routing | React Router 6 |
-| Icons | Lucide React |
-| Testing | Vitest + Playwright |
+| Layer     | Technology                 |
+| --------- | -------------------------- |
+| Framework | React 18 + TypeScript      |
+| Bundler   | Vite 5                     |
+| Styling   | Tailwind CSS 3 + shadcn/ui |
+| Routing   | React Router 6             |
+| Icons     | Lucide React               |
+| Testing   | Vitest + Playwright        |
 
 ## 🚀 Getting Started
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Start dev server
-bun run dev
+npm run dev
 
 # Production build
-bun run build
+npm run build
 
 # Run tests
-bun run test
+npm run test
 ```
 
 ## 📁 Project Structure
@@ -53,10 +53,6 @@ src/
 ├── pages/            # Pages (Index, NotFound)
 └── test/             # Test configuration
 ```
-
-## 📸 Screenshots
-
-*Coming soon*
 
 ## 📄 License
 
