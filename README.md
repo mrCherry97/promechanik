@@ -1,59 +1,67 @@
 # 🔧 ProMechanik
 
-Profesjonalna strona internetowa warsztatu samochodowego — nowoczesna, responsywna i szybka.
+> Professional auto repair shop website built with React, TypeScript & Tailwind CSS. Fast, responsive, and modern.
 
-🌐 **Live:** [promechanik-test.lovable.app](https://promechanik-test.lovable.app)
+🌐 **Live Demo:** [promechanik-test.lovable.app](https://promechanik-test.lovable.app)
 
 ---
 
-## 📋 Sekcje strony
+## ✨ Features
 
-- **Nawigacja** — responsywny pasek nawigacyjny
-- **Hero** — sekcja powitalna z CTA
-- **Usługi** — przegląd oferowanych usług mechanicznych
-- **Dlaczego my** — przewagi konkurencyjne warsztatu
-- **Kontakt** — formularz kontaktowy i dane adresowe
-- **Stopka** — linki i informacje prawne
+- 🏠 Eye-catching hero section with call-to-action
+- 🔩 Services showcase with detailed descriptions
+- ✅ "Why Choose Us" competitive advantages section
+- 📞 Contact form with address & location info
+- 📱 Fully responsive design (mobile, tablet, desktop)
+- ⚡ Lightning-fast performance with Vite
 
-## 🛠️ Stack technologiczny
+## 🛠️ Tech Stack
 
-| Warstwa    | Technologia                |
-| ---------- | -------------------------- |
-| Framework  | React 18 + TypeScript      |
-| Bundler    | Vite 5                     |
-| Stylowanie | Tailwind CSS 3 + shadcn/ui |
-| Routing    | React Router 6             |
-| Ikony      | Lucide React               |
-| Testy      | Vitest + Playwright        |
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 18 + TypeScript |
+| Bundler | Vite 5 |
+| Styling | Tailwind CSS 3 + shadcn/ui |
+| Routing | React Router 6 |
+| Icons | Lucide React |
+| Testing | Vitest + Playwright |
 
-## 🚀 Uruchomienie lokalne
+## 🚀 Getting Started
 
 ```bash
-# Instalacja zależności
+# Install dependencies
 bun install
 
-# Serwer deweloperski
+# Start dev server
 bun run dev
 
-# Build produkcyjny
+# Production build
 bun run build
 
-# Testy
+# Run tests
 bun run test
 ```
 
-## 📁 Struktura projektu
+## 📁 Project Structure
 
 ```
 src/
-├── components/       # Komponenty UI (Navbar, Hero, Services, etc.)
-│   └── ui/           # Bazowe komponenty shadcn/ui
+├── components/       # UI components (Navbar, Hero, Services, etc.)
+│   └── ui/           # Base shadcn/ui components
 ├── hooks/            # Custom React hooks
-├── lib/              # Funkcje pomocnicze
-├── pages/            # Strony (Index, NotFound)
-└── test/             # Konfiguracja testów
+├── lib/              # Utility functions
+├── pages/            # Pages (Index, NotFound)
+└── test/             # Test configuration
 ```
 
-## 📄 Licencja
+## 📸 Screenshots
 
-Projekt prywatny. Wszelkie prawa zastrzeżone.
+*Coming soon*
+
+## 📄 License
+
+Private project. All rights reserved.
+
+---
+
+Built with ❤️ using [Lovable](https://lovable.dev)
