@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProMechanik - Ulotka Opinia</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        font-family: "Inter", sans-serif;
+        background: #1a1d24;
+        color: #e8e4dc;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          170deg,
+          #2a2d35 0%,
+          #1a1d24 40%,
+          #1a1d24 100%
+        );
+      }
+
+      /* Metallic corner accents */
+      .corner-tl,
+      .corner-tr,
+      .corner-bl,
+      .corner-br {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        z-index: 2;
+      }
+      .corner-tl {
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+          135deg,
+          #5a6070 0%,
+          #3a3f4a 40%,
+          transparent 70%
+        );
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+      }
+      .corner-tr {
+        top: 0;
+        right: 0;
+        background: linear-gradient(
+          225deg,
+          #5a6070 0%,
+          #3a3f4a 40%,
+          transparent 70%
+        );
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+      }
+      .corner-bl {
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          45deg,
+          #5a6070 0%,
+          #3a3f4a 40%,
+          transparent 70%
+        );
+        clip-path: polygon(0 0, 0 100%, 100% 100%);
+      }
+      .corner-br {
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+          315deg,
+          #5a6070 0%,
+          #3a3f4a 40%,
+          transparent 70%
+        );
+        clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      }
+
+      /* Decorative bolts */
+      .bolt {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 40% 35%, #8a8f9a, #4a4f5a);
+        box-shadow:
+          inset 0 1px 2px rgba(255, 255, 255, 0.3),
+          0 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 3;
+      }
+      .bolt::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+        color: #3a3f4a;
+        font-weight: bold;
+      }
+      .bolt-tl {
+        top: 20px;
+        left: 20px;
+      }
+      .bolt-tr {
+        top: 20px;
+        right: 20px;
+      }
+      .bolt-bl {
+        bottom: 20px;
+        left: 20px;
+      }
+      .bolt-br {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      /* Subtle metallic texture overlay */
+      .texture {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 2px,
+          rgba(255, 255, 255, 0.008) 2px,
+          rgba(255, 255, 255, 0.008) 4px
+        );
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      /* Accent line */
+      .accent-line {
+        width: 80%;
+        height: 3px;
+        margin: 0 auto;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #e8a020,
+          #f0b030,
+          #e8a020,
+          transparent
+        );
+        border-radius: 2px;
+      }
+
+      .accent-line-thin {
+        width: 60%;
+        height: 1px;
+        margin: 0 auto;
+        background: linear-gradient(90deg, transparent, #e8a020, transparent);
+      }
+
+      /* Content wrapper */
+      .content {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 50px 40px;
+        text-align: center;
+      }
+
+      .logo-section {
+        margin-bottom: 30px;
+      }
+
+      .logo-section img {
+        width: 340px;
+        height: auto;
+        filter: brightness(1.4) saturate(1.1);
+      }
+
+      .stars {
+        font-size: 52px;
+        letter-spacing: 8px;
+        margin: 20px 0;
+        filter: drop-shadow(0 2px 8px rgba(232, 160, 32, 0.4));
+      }
+
+      .headline {
+        font-family: "Oswald", sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #ffffff;
+        margin: 20px 0 10px;
+        line-height: 1.15;
+      }
+
+      .headline .highlight {
+        color: #e8a020;
+      }
+
+      .subheadline {
+        font-family: "Oswald", sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #b0a898;
+        margin-bottom: 30px;
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #c0bab0;
+        max-width: 420px;
+        margin: 0 auto 35px;
+      }
+
+      .qr-section {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 16px;
+        display: inline-block;
+        margin: 10px 0 20px;
+        box-shadow:
+          0 8px 30px rgba(0, 0, 0, 0.4),
+          0 0 20px rgba(232, 160, 32, 0.15);
+      }
+
+      .qr-section img {
+        width: 180px;
+        height: 180px;
+        display: block;
+      }
+
+      .scan-text {
+        font-family: "Oswald", sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #e8a020;
+        margin: 15px 0 5px;
+        font-weight: 500;
+      }
+
+      .scan-subtext {
+        font-size: 13px;
+        color: #8a8580;
+        margin-bottom: 25px;
+      }
+
+      .thank-you {
+        font-family: "Oswald", sans-serif;
+        font-size: 26px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #e8a020;
+        margin-top: 20px;
+      }
+
+      .contact-info {
+        font-size: 13px;
+        color: #7a756e;
+        margin-top: 15px;
+        line-height: 1.6;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="texture"></div>
+      <div class="corner-tl"></div>
+      <div class="corner-tr"></div>
+      <div class="corner-bl"></div>
+      <div class="corner-br"></div>
+      <div class="bolt bolt-tl"></div>
+      <div class="bolt bolt-tr"></div>
+      <div class="bolt bolt-bl"></div>
+      <div class="bolt bolt-br"></div>
+
+      <div class="content">
+        <div class="logo-section">
+          <img src="logo.png" alt="ProMechanik Logo" />
+        </div>
+
+        <div class="accent-line"></div>
+
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+
+        <h1 class="headline">
+          Twoja opinia<br />
+          <span class="highlight">ma dla nas znaczenie!</span>
+        </h1>
+
+        <p class="subheadline">Pomóż innym znaleźć dobrego mechanika</p>
+
+        <div class="accent-line-thin"></div>
+
+        <p class="description">
+          Jeśli jesteś zadowolony z naszych usług, będziemy wdzięczni za
+          wystawienie opinii w Google. Każda recenzja pomaga nam się rozwijać i
+          docierać do nowych klientów.
+        </p>
+
+        <p class="scan-text">Zeskanuj kod QR</p>
+        <div class="qr-section">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fwww.google.com%2Fsearch%3Fsca_esv%3Def91e3cdcba5483e%26sxsrf%3DANbL-n5S6dzTR0qz5DqVBZ__lOcW21RDag%3A1774621430890%26si%3DAL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOf3AdMcShu9POfwGyX2Er0qH_a4P05PxDuv9_2FjPBX5Z2cN8PizK0WpDHSHu8KP2iZAcxQZPI7ivSUipRe-XHCwPq1RbFESYsByODMSRg_XICBsGQuv0g-fAhhIQyX8kgrGixCt2FrQM_RrBenqSUZwqPnK%26q%3DPromechanik%2B-%2Bmechanika%2Bsamochodowa%2C%2Bwulkanizacja%2C%2Bklimatyzacja%2BOpinie%26sa%3DX%26ved%3D2ahUKEwjf1P7_o8CTAxXGGhAIHdpJLfMQ0bkNegQIMBAH%26biw%3D2560%26bih%3D1295%26dpr%3D1&color=1a1d24&bgcolor=ffffff"
+            alt="QR Code - Wystaw opinię"
+          />
+        </div>
+        <p class="scan-subtext">
+          lub wyszukaj „ProMechanik Gliwice" w Google Maps
+        </p>
+
+        <div class="accent-line-thin"></div>
+
+        <p class="thank-you">Dziękujemy za zaufanie!</p>
+
+        <p class="contact-info">
+          ProMechanik S.C. &bull; ul. Pszczyńska 74, 44-100 Gliwice<br />
+          Tel: +48 514 656 945 &bull; promechanik-gliwice.pl
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
