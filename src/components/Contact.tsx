@@ -5,8 +5,12 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-primary font-display tracking-widest text-sm mb-2">SKONTAKTUJ SIĘ</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-display">Kontakt</h2>
+          <p className="text-primary font-display tracking-widest text-sm mb-2">
+            SKONTAKTUJ SIĘ
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold font-display">
+            Kontakt
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -27,9 +31,16 @@ const Contact = () => {
             <div className="flex items-start gap-4">
               <MapPin className="h-6 w-6 text-primary mt-1 shrink-0" />
               <div>
-                <h4 className="font-display font-semibold text-lg">Lokalizacja</h4>
-                <a href="https://maps.app.goo.gl/EWL7wk4N3MohPm8j9?g_st=ic" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  ul. Pszczyńska 74, 44-100 Gliwice
+                <h4 className="font-display font-semibold text-lg">
+                  Lokalizacja
+                </h4>
+                <a
+                  href="https://maps.app.goo.gl/EWL7wk4N3MohPm8j9?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  ul. Pszczyńska 72, 44-100 Gliwice
                 </a>
               </div>
             </div>
@@ -37,13 +48,20 @@ const Contact = () => {
               <Phone className="h-6 w-6 text-primary mt-1 shrink-0" />
               <div>
                 <h4 className="font-display font-semibold text-lg">Telefon</h4>
-                <a href="tel:514656945" className="text-muted-foreground hover:text-primary transition-colors">514 656 945</a>
+                <a
+                  href="tel:514656945"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  514 656 945
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Clock className="h-6 w-6 text-primary mt-1 shrink-0" />
               <div>
-                <h4 className="font-display font-semibold text-lg">Godziny Otwarcia</h4>
+                <h4 className="font-display font-semibold text-lg">
+                  Godziny Otwarcia
+                </h4>
                 <p className="text-muted-foreground">Pon–Pt: 8:00 – 18:00</p>
                 <p className="text-muted-foreground">Sob: 8:00 – 13:00</p>
                 <p className="text-muted-foreground">Ndz: Zamknięte</p>
