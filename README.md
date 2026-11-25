@@ -2,7 +2,7 @@
 
 > Professional auto repair shop website built with React, TypeScript & Tailwind CSS. Fast, responsive, and modern.
 
-🌐 **Live Demo:** [mrcherry97.github.io/promechanik/](https://mrcherry97.github.io/promechanik/)
+🌐 **Live Demo:** [promechanik-gliwice.pl](https://promechanik-gliwice.pl)
 
 ---
 
@@ -57,7 +57,3 @@ src/
 ## 📄 License
 
 Private project. All rights reserved.
-
----
-
-Built with ❤️ using [Lovable](https://lovable.dev)
